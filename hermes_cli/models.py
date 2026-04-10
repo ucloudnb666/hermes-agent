@@ -486,6 +486,8 @@ _PROVIDER_LABELS = {
     "qwen-oauth": "Qwen OAuth (Portal)",
     "huggingface": "Hugging Face",
     "custom": "Custom endpoint",
+    "astraflow": "Astraflow",
+    "astraflow-cn": "Astraflow (China)",
 }
 
 _PROVIDER_ALIASES = {
@@ -505,6 +507,11 @@ _PROVIDER_ALIASES = {
     "kimi": "kimi-coding",
     "moonshot": "kimi-coding",
     "minimax-china": "minimax-cn",
+    "astra-flow": "astraflow",
+    "astra_flow": "astraflow",
+    "modelverse": "astraflow",
+    "astraflow-china": "astraflow-cn",
+    "astraflow_cn": "astraflow-cn",
     "minimax_cn": "minimax-cn",
     "claude": "anthropic",
     "claude-code": "anthropic",
