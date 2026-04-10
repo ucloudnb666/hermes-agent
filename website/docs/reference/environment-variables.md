@@ -35,6 +35,10 @@ All variables go in `~/.hermes/.env`. You can also set them with `hermes config 
 | `MINIMAX_BASE_URL` | Override MiniMax base URL (default: `https://api.minimax.io/v1`) |
 | `MINIMAX_CN_API_KEY` | MiniMax API key — China endpoint ([minimaxi.com](https://www.minimaxi.com)) |
 | `MINIMAX_CN_BASE_URL` | Override MiniMax China base URL (default: `https://api.minimaxi.com/v1`) |
+| `ASTRAFLOW_API_KEY` | Astraflow API key — global endpoint ([astraflow.ucloud.cn](https://astraflow.ucloud.cn/)) |
+| `ASTRAFLOW_BASE_URL` | Override Astraflow base URL (default: `https://api-us-ca.umodelverse.ai/v1`) |
+| `ASTRAFLOW_CN_API_KEY` | Astraflow API key — China endpoint ([astraflow.ucloud.cn](https://astraflow.ucloud.cn/)) |
+| `ASTRAFLOW_CN_BASE_URL` | Override Astraflow China base URL (default: `https://api.modelverse.cn/v1`) |
 | `KILOCODE_API_KEY` | Kilo Code API key ([kilo.ai](https://kilo.ai)) |
 | `KILOCODE_BASE_URL` | Override Kilo Code base URL (default: `https://api.kilo.ai/api/gateway`) |
 | `HF_TOKEN` | Hugging Face token for Inference Providers ([huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)) |
