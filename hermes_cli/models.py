@@ -300,6 +300,16 @@ _PROVIDER_MODELS: dict[str, list[str]] = {
         "XiaomiMiMo/MiMo-V2-Flash",
         "moonshotai/Kimi-K2-Thinking",
     ],
+    "astraflow": [
+        "deepseek-r1",
+        "deepseek-v3",
+        "llama-3.3-70b-instruct",
+    ],
+    "astraflow-cn": [
+        "deepseek-r1",
+        "deepseek-v3",
+        "llama-3.3-70b-instruct",
+    ],
 }
 
 # ---------------------------------------------------------------------------
@@ -533,6 +543,8 @@ CANONICAL_PROVIDERS: list[ProviderEntry] = [
     ProviderEntry("opencode-zen",   "OpenCode Zen",             "OpenCode Zen (35+ curated models, pay-as-you-go)"),
     ProviderEntry("opencode-go",    "OpenCode Go",              "OpenCode Go (open models, $10/month subscription)"),
     ProviderEntry("ai-gateway",     "Vercel AI Gateway",        "Vercel AI Gateway (200+ models, pay-per-use)"),
+    ProviderEntry("astraflow",      "Astraflow (ModelVerse)",    "Astraflow / UCloud ModelVerse (global endpoint — DeepSeek, Llama)"),
+    ProviderEntry("astraflow-cn",   "Astraflow China",          "Astraflow / UCloud ModelVerse China (domestic endpoint — DeepSeek, Llama)"),
 ]
 
 # Derived dicts — used throughout the codebase
@@ -564,6 +576,13 @@ _PROVIDER_ALIASES = {
     "claude": "anthropic",
     "claude-code": "anthropic",
     "deep-seek": "deepseek",
+    # astraflow (global)
+    "astra-flow": "astraflow",
+    "astra_flow": "astraflow",
+    "modelverse": "astraflow",
+    # astraflow-cn (China)
+    "astraflow-china": "astraflow-cn",
+    "astraflow_cn": "astraflow-cn",
     "opencode": "opencode-zen",
     "zen": "opencode-zen",
     "go": "opencode-go",
