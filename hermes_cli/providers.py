@@ -141,6 +141,16 @@ HERMES_OVERLAYS: Dict[str, HermesOverlay] = {
         base_url_override="https://api.arcee.ai/api/v1",
         base_url_env_var="ARCEE_BASE_URL",
     ),
+    "astraflow": HermesOverlay(
+        transport="openai_chat",
+        base_url_override="https://api-us-ca.umodelverse.ai/v1",
+        base_url_env_var="ASTRAFLOW_BASE_URL",
+    ),
+    "astraflow-cn": HermesOverlay(
+        transport="openai_chat",
+        base_url_override="https://api.umodelverse.ai/v1",
+        base_url_env_var="ASTRAFLOW_CN_BASE_URL",
+    ),
 }
 
 
@@ -239,6 +249,15 @@ ALIASES: Dict[str, str] = {
     # arcee
     "arcee-ai": "arcee",
     "arceeai": "arcee",
+
+    # astraflow (global)
+    "astra-flow": "astraflow",
+    "astra_flow": "astraflow",
+    "modelverse": "astraflow",
+
+    # astraflow-cn (China)
+    "astraflow-china": "astraflow-cn",
+    "astraflow_cn": "astraflow-cn",
 
     # Local server aliases → virtual "local" concept (resolved via user config)
     "lmstudio": "lmstudio",
