@@ -274,6 +274,22 @@ PROVIDER_REGISTRY: Dict[str, ProviderConfig] = {
         api_key_env_vars=("XIAOMI_API_KEY",),
         base_url_env_var="XIAOMI_BASE_URL",
     ),
+    "astraflow": ProviderConfig(
+        id="astraflow",
+        name="Astraflow (ModelVerse)",
+        auth_type="api_key",
+        inference_base_url="https://api-us-ca.umodelverse.ai/v1",
+        api_key_env_vars=("ASTRAFLOW_API_KEY",),
+        base_url_env_var="ASTRAFLOW_BASE_URL",
+    ),
+    "astraflow-cn": ProviderConfig(
+        id="astraflow-cn",
+        name="Astraflow China (ModelVerse CN)",
+        auth_type="api_key",
+        inference_base_url="https://api.umodelverse.ai/v1",
+        api_key_env_vars=("ASTRAFLOW_CN_API_KEY",),
+        base_url_env_var="ASTRAFLOW_CN_BASE_URL",
+    ),
 }
 
 
