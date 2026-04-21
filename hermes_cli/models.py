@@ -337,6 +337,39 @@ _PROVIDER_MODELS: dict[str, list[str]] = {
         "moonshotai/Kimi-K2-Thinking",
         "moonshotai/Kimi-K2.6",
     ],
+    # Astraflow (UCloud / 优刻得) — OpenAI-compatible aggregator, 200+ models.
+    # Global endpoint; users in mainland China should use astraflow-cn.
+    "astraflow": [
+        "moonshotai/kimi-k2.6",
+        "moonshotai/kimi-k2.5",
+        "anthropic/claude-opus-4.6",
+        "anthropic/claude-sonnet-4.6",
+        "anthropic/claude-haiku-4.5",
+        "openai/gpt-5.4",
+        "openai/gpt-5.4-mini",
+        "google/gemini-2.5-pro",
+        "google/gemini-2.5-flash",
+        "deepseek/deepseek-v3",
+        "deepseek/deepseek-r1",
+        "qwen/qwen3-235b-a22b",
+        "meta-llama/llama-4-maverick",
+    ],
+    # Astraflow China endpoint — same catalog, routed via mainland China servers.
+    "astraflow-cn": [
+        "moonshotai/kimi-k2.6",
+        "moonshotai/kimi-k2.5",
+        "anthropic/claude-opus-4.6",
+        "anthropic/claude-sonnet-4.6",
+        "anthropic/claude-haiku-4.5",
+        "openai/gpt-5.4",
+        "openai/gpt-5.4-mini",
+        "google/gemini-2.5-pro",
+        "google/gemini-2.5-flash",
+        "deepseek/deepseek-v3",
+        "deepseek/deepseek-r1",
+        "qwen/qwen3-235b-a22b",
+        "meta-llama/llama-4-maverick",
+    ],
     # AWS Bedrock — static fallback list used when dynamic discovery is
     # unavailable (no boto3, no credentials, or API error).  The agent
     # prefers live discovery via ListFoundationModels + ListInferenceProfiles.
@@ -588,7 +621,9 @@ CANONICAL_PROVIDERS: list[ProviderEntry] = [
     ProviderEntry("minimax",        "MiniMax",                  "MiniMax (global direct API)"),
     ProviderEntry("minimax-cn",     "MiniMax (China)",          "MiniMax China (domestic direct API)"),
     ProviderEntry("alibaba",        "Alibaba Cloud (DashScope)","Alibaba Cloud / DashScope Coding (Qwen + multi-provider)"),
-    ProviderEntry("ollama-cloud",   "Ollama Cloud",             "Ollama Cloud (cloud-hosted open models — ollama.com)"),
+    ProviderEntry("ollama-cloud",   "Ollama Cloud",
+    ProviderEntry("astraflow",      "Astraflow",               "Astraflow by UCloud (200+ models, global endpoint)"),
+    ProviderEntry("astraflow-cn",   "Astraflow (China)",        "Astraflow by UCloud (200+ models, China endpoint)"),             "Ollama Cloud (cloud-hosted open models — ollama.com)"),
     ProviderEntry("arcee",          "Arcee AI",                 "Arcee AI (Trinity models — direct API)"),
     ProviderEntry("kilocode",       "Kilo Code",                "Kilo Code (Kilo Gateway API)"),
     ProviderEntry("opencode-zen",   "OpenCode Zen",             "OpenCode Zen (35+ curated models, pay-as-you-go)"),
